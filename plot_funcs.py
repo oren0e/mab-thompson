@@ -9,9 +9,9 @@ from core import Environment
 from typing import Optional
 
 
-def plot_variants(env0: Environment, iter_num: int, save_to: Optional[str] = None) -> None:
+def plot_variants(env: Environment, iter_num: int, save_to: Optional[str] = None) -> None:
     x = np.linspace(0, 1, 5000)
-    iteration = env0.a_b_beta_prams[iter_num]
+    iteration = env.a_b_beta_prams[iter_num]
     plt.style.use('ggplot')
     color = iter(plt.cm.rainbow(np.linspace(0, 1, len(iteration))))
     for i, (a, b) in enumerate(iteration):

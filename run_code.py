@@ -13,7 +13,7 @@ if __name__ == "__main__":
     samp = ThompsonSampler(env0)
     env0.run(agent=samp, n_trials=1000)
 
-    plot_variants(iter_num=20)
-    plot_variants(iter_num=200)
-    plot_variants(iter_num=500)
-    plot_variants(iter_num=900)
+    plot_variants(env0, iter_num=20)
+    plot_variants(env0, iter_num=200)
+    plot_variants(env0, iter_num=500)
+    plot_variants(env0, iter_num=900)
